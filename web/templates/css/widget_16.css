@@ -1,0 +1,452 @@
+/* button */
+.newton_callback_phone {
+  width: 120px !important;
+  height: 120px !important;
+
+  position: fixed !important;
+  bottom: 15% !important;
+  right: 15% !important;
+  z-index: 100002 !important;
+  cursor: pointer !important;
+  transform-origin: 50% 50% 0 !important;
+}
+
+.newton_callback_phone:hover {
+  opacity: 1 !important;
+}
+* ----- animations ----- */
+/*n1*/
+@-webkit-keyframes enlarge1 {
+  20%  {
+    -webkit-transform: scale(1.15,1.15);
+       -moz-transform: scale(1.15,1.15);
+      -ms-transform: scale(1.15,1.15);
+       -o-transform: scale(1.15,1.15);
+        transform: scale(1.15,1.15);
+  }
+  70% {
+    -webkit-transform: scale(1,1);
+       -moz-transform: scale(1,1);
+      -ms-transform: scale(1,1);
+       -o-transform: scale(1,1);
+        transform: scale(1,1);
+  }
+}
+@-moz-keyframes enlarge1 {
+  20%  {
+    -webkit-transform: scale(1.15,1.15);
+       -moz-transform: scale(1.15,1.15);
+      -ms-transform: scale(1.15,1.15);
+       -o-transform: scale(1.15,1.15);
+        transform: scale(1.15,1.15);
+  }
+  70% {
+    -webkit-transform: scale(1,1);
+       -moz-transform: scale(1,1);
+      -ms-transform: scale(1,1);
+       -o-transform: scale(1,1);
+        transform: scale(1,1);
+  }
+}
+@-ms-keyframes enlarge1 {
+  20%  {
+    -webkit-transform: scale(1.15,1.15);
+       -moz-transform: scale(1.15,1.15);
+      -ms-transform: scale(1.15,1.15);
+       -o-transform: scale(1.15,1.15);
+        transform: scale(1.15,1.15);
+  }
+  70% {
+    -webkit-transform: scale(1,1);
+       -moz-transform: scale(1,1);
+      -ms-transform: scale(1,1);
+       -o-transform: scale(1,1);
+        transform: scale(1,1);
+  }
+}
+@-o-keyframes enlarge1 {
+  20%  {
+    -webkit-transform: scale(1.15,1.15);
+       -moz-transform: scale(1.15,1.15);
+      -ms-transform: scale(1.15,1.15);
+       -o-transform: scale(1.15,1.15);
+        transform: scale(1.15,1.15);
+  }
+  70% {
+    -webkit-transform: scale(1,1);
+       -moz-transform: scale(1,1);
+      -ms-transform: scale(1,1);
+       -o-transform: scale(1,1);
+        transform: scale(1,1);
+  }
+}
+@keyframes enlarge1 {
+  20%  {
+    -webkit-transform: scale(1.15,1.15);
+       -moz-transform: scale(1.15,1.15);
+      -ms-transform: scale(1.15,1.15);
+       -o-transform: scale(1.15,1.15);
+        transform: scale(1.15,1.15);
+  }
+  70% {
+    -webkit-transform: scale(1,1);
+       -moz-transform: scale(1,1);
+      -ms-transform: scale(1,1);
+       -o-transform: scale(1,1);
+        transform: scale(1,1);
+  }
+}
+/*n2*/
+@-webkit-keyframes enlarge2 {
+  20%  {
+    -webkit-transform: scale(1.3,1.3);
+       -moz-transform: scale(1.3,1.3);
+      -ms-transform: scale(1.3,1.3);
+       -o-transform: scale(1.3,1.3);
+        transform: scale(1.3,1.3);
+  }
+  70% {
+    -webkit-transform: scale(1,1);
+       -moz-transform: scale(1,1);
+      -ms-transform: scale(1,1);
+       -o-transform: scale(1,1);
+        transform: scale(1,1);
+  }
+}
+@-moz-keyframes enlarge2 {
+  20%  {
+    -webkit-transform: scale(1.3,1.3);
+       -moz-transform: scale(1.3,1.3);
+      -ms-transform: scale(1.3,1.3);
+       -o-transform: scale(1.3,1.3);
+        transform: scale(1.3,1.3);
+  }
+  70% {
+    -webkit-transform: scale(1,1);
+       -moz-transform: scale(1,1);
+      -ms-transform: scale(1,1);
+       -o-transform: scale(1,1);
+        transform: scale(1,1);
+  }
+}
+@-ms-keyframes enlarge2 {
+  20%  {
+    -webkit-transform: scale(1.3,1.3);
+       -moz-transform: scale(1.3,1.3);
+      -ms-transform: scale(1.3,1.3);
+       -o-transform: scale(1.3,1.3);
+        transform: scale(1.3,1.3);
+  }
+  70% {
+    -webkit-transform: scale(1,1);
+       -moz-transform: scale(1,1);
+      -ms-transform: scale(1,1);
+       -o-transform: scale(1,1);
+        transform: scale(1,1);
+  }
+}
+@-o-keyframes enlarge2 {
+  20%  {
+    -webkit-transform: scale(1.3,1.3);
+       -moz-transform: scale(1.3,1.3);
+      -ms-transform: scale(1.3,1.3);
+       -o-transform: scale(1.3,1.3);
+        transform: scale(1.3,1.3);
+  }
+  70% {
+    -webkit-transform: scale(1,1);
+       -moz-transform: scale(1,1);
+      -ms-transform: scale(1,1);
+       -o-transform: scale(1,1);
+        transform: scale(1,1);
+  }
+}
+@keyframes enlarge2 {
+  20%  {
+    -webkit-transform: scale(1.3,1.3);
+       -moz-transform: scale(1.3,1.3);
+      -ms-transform: scale(1.3,1.3);
+       -o-transform: scale(1.3,1.3);
+        transform: scale(1.3,1.3);
+  }
+  70% {
+    -webkit-transform: scale(1,1);
+       -moz-transform: scale(1,1);
+      -ms-transform: scale(1,1);
+       -o-transform: scale(1,1);
+        transform: scale(1,1);
+  }
+}
+/*n3 hover*/
+@-webkit-keyframes pulsing {
+  50%   {
+    -webkit-transform: scale(1.1,1.1);
+       -moz-transform: scale(1.1,1.1);
+      -ms-transform: scale(1.1,1.1);
+       -o-transform: scale(1.1,1.1);
+        transform: scale(1.1,1.1);
+  }
+}
+@-moz-keyframes pulsing {
+  50%   {
+    -webkit-transform: scale(1.1,1.1);
+       -moz-transform: scale(1.1,1.1);
+      -ms-transform: scale(1.1,1.1);
+       -o-transform: scale(1.1,1.1);
+        transform: scale(1.1,1.1);
+  }
+}
+@-ms-keyframes pulsing {
+  50%   {
+    -webkit-transform: scale(1.1,1.1);
+       -moz-transform: scale(1.1,1.1);
+      -ms-transform: scale(1.1,1.1);
+       -o-transform: scale(1.1,1.1);
+        transform: scale(1.1,1.1);
+  }
+}
+@-o-keyframes pulsing {
+  50%   {
+    -webkit-transform: scale(1.1,1.1);
+       -moz-transform: scale(1.1,1.1);
+      -ms-transform: scale(1.1,1.1);
+       -o-transform: scale(1.1,1.1);
+        transform: scale(1.1,1.1);
+  }
+}
+@keyframes pulsing {
+  50%   {
+    -webkit-transform: scale(1.1,1.1);
+       -moz-transform: scale(1.1,1.1);
+      -ms-transform: scale(1.1,1.1);
+       -o-transform: scale(1.1,1.1);
+        transform: scale(1.1,1.1);
+  }
+}
+/* ----- rotate ----- */
+@-webkit-keyframes rotate {
+  0%   {-webkit-transform: rotate(0deg);}
+  50%  {-webkit-transform: rotate(180deg);}
+  100% {-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes rotate {
+  0%   {-moz-transform: rotate(0deg);}
+  50%  {-moz-transform: rotate(180deg);}
+  100% {-moz-transform: rotate(360deg);}
+}
+@-ms-keyframes rotate {
+  0%   {-ms-transform: rotate(0deg);}
+  50%  {-ms-transform: rotate(180deg);}
+  100% {-ms-transform: rotate(360deg);}
+}
+@-o-keyframes rotate {
+  0%   {-o-transform: rotate(0deg);}
+  50%  {-o-transform: rotate(180deg);}
+  100% {-o-transform: rotate(360deg);}
+}
+@keyframes rotate {
+  0%   {transform: rotate(0deg);}
+  50%  {transform: rotate(180deg);}
+  100% {transform: rotate(360deg);}
+}
+
+.newton_callback_phone.newton_animation .newton-circle-back {
+  -webkit-transform-origin: center center !important;
+     -moz-transform-origin: center center !important;
+      transform-origin: center center !important;
+
+  -webkit-animation: enlarge2 4s 0.3s infinite linear both;
+     -moz-animation: enlarge2 4s 0.3s infinite linear both;
+      animation: enlarge2 4s 0.3s infinite linear both;
+
+  -webkit-transition: opacity 0.2s linear;
+     -moz-transition: opacity 0.2s linear;
+      transition: opacity 0.2s linear;
+}
+.newton_callback_phone.newton_animation .newton-circle-front {
+  -webkit-transform-origin: center center !important;
+     -moz-transform-origin: center center !important;
+      transform-origin: center center !important;
+
+  -webkit-animation: enlarge1 4s infinite linear both;
+     -moz-animation: enlarge1 4s infinite linear both;
+      animation: enlarge1 4s infinite linear both;
+}
+.newton_callback_phone.newton_animation .newton-text {
+  text-anchor: middle;
+  text-transform: uppercase;
+  font: bold 10px Calibri, "PT Sans", Arial, Helvetica, sans-serif;
+
+  -webkit-transform-origin: center center !important;
+     -moz-transform-origin: center center !important;
+      transform-origin: center center !important;
+
+  -webkit-animation: rotate 6.5s infinite linear reverse both;
+     -moz-animation: rotate 6.5s infinite linear reverse both;
+      animation: rotate 6.5s infinite linear reverse both;
+}
+.newton_callback_phone.newton_animation .newton-icon {
+  -webkit-transform-origin: center center !important;
+     -moz-transform-origin: center center !important;
+      transform-origin: center center !important;
+}
+
+.newton_callback_phone.newton_animation .newton-icon-handset {
+      opacity: 1;
+        -webkit-animation: handsetIcon 5s infinite linear both;
+       -moz-animation: handsetIcon 5s infinite linear both;
+        animation: handsetIcon 5s infinite linear both;
+      }
+
+.newton_callback_phone.newton_animation .newton-icon-callback {
+      opacity: 0;
+      -webkit-animation: applicationIcon 5s infinite linear both;
+     -moz-animation: applicationIcon 5s infinite linear both;
+      animation: applicationIcon 5s infinite linear both;
+  }
+
+.newton_callback_phone.newton_animation .newton-icon-consultant {
+      opacity: 0;
+    }
+
+.newton_callback_phone .newton-circle-back {
+  opacity: 0.2;
+}
+
+.newton_callback_phone .newton-circle-front {
+  opacity: 0.8;
+}
+
+.newton_callback_phone .newton-ring {
+  opacity: 0.1;
+}
+
+.newton_callback_phone .newton-circle-back,
+.newton_callback_phone .newton-circle-front,
+.newton_callback_phone .newton-ring {
+  -webkit-transition: opacity 0.2s linear;
+     -moz-transition: opacity 0.2s linear;
+      transition: opacity 0.2s linear;
+}
+/* ----- hover event ----- */
+.newton_callback_phone.newton_animation .newton-wrapper {
+  -webkit-transform-origin: center center !important;
+     -moz-transform-origin: center center !important;
+      transform-origin: center center !important;
+
+  -webkit-animation: pulsing 0.5s infinite linear both;
+     -moz-animation: pulsing 0.5s infinite linear both;
+      animation: pulsing 0.5s infinite linear both;
+
+  -webkit-animation-play-state: paused;
+     -moz-animation-play-state: paused;
+      animation-play-state: paused;
+}
+.newton_callback_phone.newton_animation:hover .newton-circle-front,
+.newton_callback_phone.newton_animation:hover .newton-circle-back {
+  -webkit-animation-play-state: paused;
+     -moz-animation-play-state: paused;
+      animation-play-state: paused;
+}
+.newton_callback_phone:hover .newton-circle-back {
+  opacity: 0;
+}
+.newton_callback_phone:hover .newton-circle-front {
+  opacity: 1;
+}
+.newton_callback_phone:hover .newton-ring {
+  opacity: 0.3;
+}
+.newton_callback_phone.newton_animation:hover .newton-wrapper {
+  -webkit-animation-play-state: running;
+     -moz-animation-play-state: running;
+      animation-play-state: running;
+}
+
+/* icon animate */
+      @-webkit-keyframes handsetIcon {
+      
+        0% {opacity: 1;}
+        45% {opacity: 1;}
+        47% {opacity: 0;}
+        99% {opacity: 0;}
+        100% {opacity: 1;}
+          }
+    @-moz-keyframes handsetIcon {
+      
+        0% {opacity: 1;}
+        45% {opacity: 1;}
+        47% {opacity: 0;}
+        99% {opacity: 0;}
+        100% {opacity: 1;}
+          }
+    @-ms-keyframes handsetIcon {
+      
+        0% {opacity: 1;}
+        45% {opacity: 1;}
+        47% {opacity: 0;}
+        99% {opacity: 0;}
+        100% {opacity: 1;}
+          }
+    @-o-keyframes handsetIcon {
+      
+        0% {opacity: 1;}
+        45% {opacity: 1;}
+        47% {opacity: 0;}
+        99% {opacity: 0;}
+        100% {opacity: 1;}
+          }
+    @keyframes handsetIcon {
+      
+        0% {opacity: 1;}
+        45% {opacity: 1;}
+        47% {opacity: 0;}
+        99% {opacity: 0;}
+        100% {opacity: 1;}
+          }
+        @-webkit-keyframes applicationIcon {
+      
+        0% {opacity: 0;}
+        49% {opacity: 0;}
+        50% {opacity: 1;}
+        95% {opacity: 1;}
+        97% {opacity: 0;}
+        100% {opacity: 0;}
+          }
+    @-moz-keyframes applicationIcon {
+      
+        0% {opacity: 0;}
+        49% {opacity: 0;}
+        50% {opacity: 1;}
+        95% {opacity: 1;}
+        97% {opacity: 0;}
+        100% {opacity: 0;}
+          }
+    @-ms-keyframes applicationIcon {
+      
+        0% {opacity: 0;}
+        49% {opacity: 0;}
+        50% {opacity: 1;}
+        95% {opacity: 1;}
+        97% {opacity: 0;}
+        100% {opacity: 0;}
+          }
+    @-o-keyframes applicationIcon {
+      
+        0% {opacity: 0;}
+        49% {opacity: 0;}
+        50% {opacity: 1;}
+        95% {opacity: 1;}
+        97% {opacity: 0;}
+        100% {opacity: 0;}
+          }
+    @keyframes applicationIcon {
+      
+        0% {opacity: 0;}
+        49% {opacity: 0;}
+        50% {opacity: 1;}
+        95% {opacity: 1;}
+        97% {opacity: 0;}
+        100% {opacity: 0;}
+          }
+    /* /icon animate *//* /button */

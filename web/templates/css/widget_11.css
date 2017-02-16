@@ -1,0 +1,82 @@
+.przv_future_button_call {
+	position:fixed !important;
+	z-index:9000000 !important;
+	width:76px !important;
+	height:76px !important;
+	-moz-user-select:none;
+	-khtml-user-select:none;
+	-webkit-user-select:none;
+	user-select:none;
+	-webkit-border-radius:100px !important;
+	-moz-border-radius:100px !important;
+	border-radius:100px !important;
+	left: 91%;
+	bottom: 13%;
+}
+.przv_future_button_call_background {
+	-webkit-border-radius:100px !important;
+	-moz-border-radius:100px !important;
+	border-radius:100px !important;
+	width:76px !important;
+	height:76px !important;
+	opacity:.92 !important;
+	position:absolute !important;
+	cursor:pointer !important
+}
+.przv_future_button_call_background_deep_water {
+	background:#0e8bff;
+	background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwZThiZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNTY4ZWZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background:-moz-radial-gradient(center,ellipse cover,#0e8bff 0,#568eff 100%);
+	background:-webkit-gradient(radial,center center,0px,center center,100%,color-stop(0%,#0e8bff),color-stop(100%,#568eff));
+	background:-webkit-radial-gradient(center,ellipse cover,#0e8bff 0,#568eff 100%);
+	background:-o-radial-gradient(center,ellipse cover,#0e8bff 0,#568eff 100%);
+	background:-ms-radial-gradient(center,ellipse cover,#0e8bff 0,#568eff 100%);
+	background:radial-gradient(ellipse at center,#0e8bff 0,#568eff 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0e8bff',endColorstr='#568eff',GradientType=1)
+}
+.przv_future_button_call_phone {
+	background-image:url('../img/widget_11_phone.png');
+	width:76px !important;
+	height:76px !important;
+	background-position:center center !important;
+	background-repeat:no-repeat !important;
+	position:absolute !important;
+	-webkit-animation:przv_future_button_phone 5s infinite !important;
+	animation:przv_future_button_phone 5s infinite !important;
+	cursor:pointer !important
+}
+@keyframes przv_future_button_phone {
+	47% {
+		transform:rotate(0deg)
+	}
+	50% {
+		transform:rotate(15deg)
+	}
+	53% {
+		transform:rotate(0deg)
+	}
+	54% {
+		transform:rotate(15deg)
+	}
+	57% {
+		transform:rotate(0deg)
+	}
+	60% {
+		transform:rotate(15deg)
+	}
+	63% {
+		transform:rotate(0deg)
+	}
+	66% {
+		transform:rotate(15deg)
+	}
+	69% {
+		transform:rotate(0deg)
+	}
+	72% {
+		transform:rotate(15deg)
+	}
+	75% {
+		transform:rotate(0deg)
+	}
+}

@@ -1,0 +1,17 @@
+.cb_button {
+  width: 140px;
+  height: 35px;
+  position: absolute;
+  right: 35px;
+  bottom: 40px;
+  background: #dd3a51 url(../img/widget_6_btn.png) no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  border-radius: 20px;
+  box-sizing: border-box;
+  border: 1px solid #dd3a51;
+  cursor: pointer;
+}
+.cb_button:hover {
+  opacity: 0.95;
+}

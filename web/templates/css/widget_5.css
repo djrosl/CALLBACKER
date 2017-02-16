@@ -1,0 +1,15 @@
+.cb_widget {
+  cursor: pointer;
+  width: 46px;
+  height: 213px;
+  background-color: #fe8f12;
+  background: url(../img/widget_5.png) no-repeat;
+  background-size: contain;
+  position: fixed;
+  right: 0;
+  top: 25%;
+  transition: opacity 0.4ms ease;
+}
+.cb_widget:hover {
+  opacity: 0.9;
+}

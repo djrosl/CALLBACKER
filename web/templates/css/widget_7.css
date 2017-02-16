@@ -1,0 +1,86 @@
+.cb_button {
+  position: fixed;
+  right: 150px;
+  bottom: 80px;
+  width: 78px;
+  height: 78px;
+  text-align: center;
+  background: #1e8bc3;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -o-border-radius: 50px;
+  -ms-border-radius: 50px;
+  border-radius: 50px;
+  opacity: 0.8;
+  padding: 0;
+  animation: btn-jump 5s cubic-bezier(0,0,0.7,1.5) 4s infinite;
+}
+.cb_button:after {
+  content: '';
+  background: #1e8bc3;
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  margin-left: -8px;
+  width: 16px;
+  height: 16px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 8;
+}
+.cb_button:hover {
+  opacity: 1;
+}
+.cb_button:hover a {
+  background: url(../img/widget_7_phone_hover.png) no-repeat center center;
+}
+.cb_button a {
+  color: #46aae1;
+  background: url(../img/widget_7_phone.png) no-repeat center center;
+  border: 0;
+  width: 78px;
+  height: 78px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -o-border-radius: 50px;
+  -ms-border-radius: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-transition: all 400ms;
+  -moz-transition: all 400ms;
+  -o-transition: all 400ms;
+  transition: all 400ms;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: relative;
+  z-index: 9;
+  text-decoration: none;
+  display: inline-block;
+}
+@keyframes btn-jump {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(-20px);
+  }
+  20% {
+    transform: translateY(20px);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
