@@ -4,7 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use yii\filters\VerbFilter;
-use yii\web\Controller;
+use app\controllers\BaseController as Controller;
 
 
 class WindowController extends Controller {
@@ -19,7 +19,9 @@ class WindowController extends Controller {
     Yii::$app->params['algoritm'] = $algoritm;
 
     \app\assets\WindowAsset::register(Yii::$app->getView());
-    \app\assets\AlgoritmAsset::register(Yii::$app->getView());
+    if($algoritm){
+      \app\assets\AlgoritmAsset::register(Yii::$app->getView());
+    }
 
     return $this->renderAjax('window_'.$type);
   }
@@ -29,13 +31,24 @@ class WindowController extends Controller {
       return false;
     }
     $site = \app\models\Site::find()->where(['like','url',$url])->one();
+
     if(!$site || !$site->enabled) {
+/*
+      $randWindow = \app\models\Window::find()->where(['type'=>1])->one();
+      return $this->show($randWindow->type, $randAlgo->type);*/
+
       return false;
+
     }
     $randWindow = $site->getWindows()->orderBy(new yii\db\Expression('rand()'))->one();
     $randAlgo = $site->getAlgoritms()->orderBy(new yii\db\Expression('rand()'))->one();
 
-    return $this->show($randWindow->type, $randAlgo->type);
+    if(!$randWindow){
+      $randWindow = \app\models\Window::find()->where(['type'=>$site->window_default ? $site->window_default : 1])->one();
+      $randAlgo = false;
+    }
+
+    return $this->show($randWindow->type, $randAlgo ? $randAlgo->type : false);
   }
 
   public function actionStatistics(){
@@ -54,9 +67,14 @@ class WindowController extends Controller {
         $window->shows = $window->shows ? $window->shows+1 : 1;
       }
 
-      if($post['t'] == 'post'){
-        /*$algo->clicks = $algo->clicks ? $algo->clicks+1 : 1;
-        $window->clicks = $window->clicks ? $window->clicks+1 : 1;*/
+      if($post['t'] == 'click'){
+        $algo->clicks = $algo->clicks ? $algo->clicks+1 : 1;
+        $window->clicks = $window->clicks ? $window->clicks+1 : 1;
+      }
+
+      if($post['t'] == 'call'){
+        $algo->calls = $algo->calls ? $algo->calls+1 : 1;
+        $window->calls = $window->calls ? $window->calls+1 : 1;
       }
 
       $algo->save();

@@ -121,4 +121,25 @@ class SiteController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+
+    public function actionWidgets($site_id){
+
+        $models = \app\models\Site::findOne(['id'=>$site_id])->getWidgets();
+
+        return $this->render('widgets', compact('models'));
+    }
+
+    public function actionWindows($site_id){
+
+        $models = \app\models\Site::findOne(['id'=>$site_id])->getWindows();
+
+        return $this->render('windows', compact('models'));
+    }
+
+    public function actionAlgo($site_id){
+
+        $models = \app\models\Site::findOne(['id'=>$site_id])->getAlgoritms();
+
+        return $this->render('algo', compact('models'));
+    }
 }

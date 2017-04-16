@@ -18,8 +18,7 @@ class AlgoritmSearch extends Algoritm
     public function rules()
     {
         return [
-            [['id', 'type', 'shows', 'clicks', 'calls'], 'integer'],
-            [['conversion', 'calls_conversion'], 'number'],
+            [['id', 'type', 'shows', 'clicks', 'calls', 'conversion', 'calls_conversion'], 'integer'],
         ];
     }
 
@@ -49,7 +48,11 @@ class AlgoritmSearch extends Algoritm
             'query' => $query,
         ]);
 
+
+
         $this->load($params);
+
+        return $dataProvider;
 
         if (!$this->validate()) {
             // uncomment the following line if you do not want to return any records when validation fails
@@ -68,6 +71,6 @@ class AlgoritmSearch extends Algoritm
             'calls_conversion' => $this->calls_conversion,
         ]);
 
-        return $dataProvider;
+        
     }
 }

@@ -36,7 +36,7 @@ class Module extends BaseModule implements IAdminModule
               ],
               [
                 'label' => \Yii::t('app', 'Расписание'), 
-                'url' => ['/admin/schedule']
+                'url' => ['/admin/schedule/update']
               ],
               [
                 'label' => \Yii::t('app', 'Алгоритмы'), 

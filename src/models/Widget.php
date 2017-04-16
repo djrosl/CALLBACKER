@@ -23,6 +23,15 @@ class Widget extends \yii\db\ActiveRecord
 
     const TYPES = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
 
+    public function behaviors()
+    {
+        return [
+            'conversion' => [
+                'class' => 'app\components\ConversionBehavior'
+            ]
+        ];
+    }
+
     /**
      * @inheritdoc
      */
@@ -38,7 +47,7 @@ class Widget extends \yii\db\ActiveRecord
     {
         return [
             [['enabled', 'site_id', 'shows', 'clicks', 'type', 'calls'], 'integer'],
-            [['conversion', 'calls_conversion'], 'number'],
+            [['conversion', 'calls_conversion'], 'integer'],
             [['title'], 'string', 'max' => 255],
         ];
     }

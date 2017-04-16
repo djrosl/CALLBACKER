@@ -18,8 +18,7 @@ class WidgetSearch extends Widget
     public function rules()
     {
         return [
-            [['id', 'enabled', 'site_id', 'shows', 'clicks', 'type', 'calls'], 'integer'],
-            [['conversion', 'calls_conversion'], 'number'],
+            [['id', 'enabled', 'site_id', 'shows', 'clicks', 'type', 'calls', 'conversion', 'calls_conversion'], 'integer'],
             [['title'], 'safe'],
         ];
     }
@@ -49,6 +48,8 @@ class WidgetSearch extends Widget
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
+
+        return $dataProvider;
 
         $this->load($params);
 

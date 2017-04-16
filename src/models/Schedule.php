@@ -17,6 +17,9 @@ use Yii;
  */
 class Schedule extends \yii\db\ActiveRecord
 {
+
+    public $params;
+
     /**
      * @inheritdoc
      */
@@ -32,7 +35,7 @@ class Schedule extends \yii\db\ActiveRecord
     {
         return [
             [['rule_id', 'day', 'no_break', 'day_and_night'], 'integer'],
-            [['start_time', 'end_time'], 'safe'],
+            [['start_time', 'end_time','lunch_start', 'lunch_end'], 'safe'],
         ];
     }
 

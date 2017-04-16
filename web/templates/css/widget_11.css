@@ -1,6 +1,6 @@
 .przv_future_button_call {
 	position:fixed !important;
-	z-index:9000000 !important;
+	z-index:999 !important;
 	width:76px !important;
 	height:76px !important;
 	-moz-user-select:none;

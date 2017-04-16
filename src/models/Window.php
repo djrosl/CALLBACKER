@@ -27,6 +27,15 @@ class Window extends \yii\db\ActiveRecord
         return 'window';
     }
 
+    public function behaviors()
+    {
+        return [
+            'conversion' => [
+                'class' => 'app\components\ConversionBehavior'
+            ]
+        ];
+    }
+
     /**
      * @inheritdoc
      */
@@ -34,7 +43,7 @@ class Window extends \yii\db\ActiveRecord
     {
         return [
             [['site_id', 'type', 'shows', 'calls', 'enabled'], 'integer'],
-            [['calls_conversion', 'conversion'], 'number'],
+            [['calls_conversion', 'conversion'], 'integer'],
             [['title'], 'string', 'max' => 255],
         ];
     }

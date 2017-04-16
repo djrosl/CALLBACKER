@@ -16,6 +16,11 @@ $model->enabled = 1;
 
     <?= $form->field($model, 'url')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'window_default')->dropDownList([
+      1=>'Окно 1',
+      2=>'Окно 2',
+    ]); ?>
+
     <?= $form->field($model, 'enabled')->checkbox(); ?>
 
     <div class="form-group">

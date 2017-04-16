@@ -26,8 +26,16 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
             'url:url',
+            [
+                'attribute'=>'links',
+                'format'=>'html',
+                'value'=>function($model){
+                    return \yii\helpers\Html::a('Виджеты', \yii\helpers\Url::to(['widgets', 'site_id'=>$model->id])).'<br>'.
+                    \yii\helpers\Html::a('Окна', \yii\helpers\Url::to(['windows', 'site_id'=>$model->id])).'<br>'.
+                    \yii\helpers\Html::a('Алгоритмы', \yii\helpers\Url::to(['algo', 'site_id'=>$model->id]));
+                }
+            ],
             'enabled',
             'registered_at',
             'visits_count',

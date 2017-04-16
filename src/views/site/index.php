@@ -38,4 +38,7 @@ Tenetur minus, est. Facilis hic qui, corporis quae ratione cum pariatur error qu
 
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script src="http://localhost:8080/js/callbacker.js"></script>
+<script>
+  var force = '<?=Yii::$app->request->get('force')?>';
+</script>
+<script src="http://callbacker.acrux.tk/js/callbacker.js"></script>

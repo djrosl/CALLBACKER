@@ -20,7 +20,9 @@
         "vlucas/phpdotenv": "~1.0@dev",
         "nullref/yii2-useful": "dev-master",
         "nullref/yii2-core": "dev-master",
-        "nullref/yii2-admin": "dev-master"
+        "nullref/yii2-admin": "dev-master",
+        "unclead/yii2-multiple-input": "~2.0",
+        "omnilight/yii2-sypexgeo": "*"
     },
     "require-dev": {
         "codeception/codeception": "^2.2",

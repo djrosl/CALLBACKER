@@ -20,6 +20,16 @@ class Algoritm extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+
+    public function behaviors()
+    {
+        return [
+            'conversion' => [
+                'class' => 'app\components\ConversionBehavior'
+            ]
+        ];
+    }
+
     public static function tableName()
     {
         return 'algoritm';
@@ -32,7 +42,7 @@ class Algoritm extends \yii\db\ActiveRecord
     {
         return [
             [['type', 'shows', 'clicks', 'calls', 'site_id', 'enabled'], 'integer'],
-            [['conversion', 'calls_conversion'], 'number'],
+            [['conversion', 'calls_conversion'], 'integer'],
         ];
     }
 

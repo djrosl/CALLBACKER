@@ -30,7 +30,7 @@ class AlgoritmAsset extends AssetBundle
     public function init(){
         parent::init();
         $this->js = [
-            'templates/js/algoritm_'. \Yii::$app->params['algoritm'].'.js'
+            'http://callbacker.acrux.tk/templates/js/algoritm_'. \Yii::$app->params['algoritm'].'.js'
         ];
     }
 }

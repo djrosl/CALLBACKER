@@ -12,6 +12,10 @@ $config = [
     'runtimePath' => dirname(dirname(__DIR__)) . '/runtime',
     'bootstrap' => ['log'],
     'components' => [
+        'sypexGeo' => [
+            'class' => 'omnilight\sypexgeo\SypexGeo',
+            'database' => '@app/data/SxGeoCity.dat',
+        ],
         'formatter' => [
             'class' => 'app\components\Formatter',
         ],

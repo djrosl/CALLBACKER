@@ -46,7 +46,7 @@ class Site extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['enabled', 'visits_count'], 'integer'],
+            [['enabled', 'visits_count', 'window_default'], 'integer'],
             [['registered_at'], 'safe'],
             [['url'], 'string', 'max' => 255],
         ];
@@ -68,6 +68,12 @@ class Site extends \yii\db\ActiveRecord
 
     public function getWindows() {
         return $this->hasMany(\app\models\Window::className(), [
+            'site_id'=>'id'
+        ])->where(['enabled' => 1]);
+    }
+
+    public function getWidgets() {
+        return $this->hasMany(\app\models\Widget::className(), [
             'site_id'=>'id'
         ])->where(['enabled' => 1]);
     }

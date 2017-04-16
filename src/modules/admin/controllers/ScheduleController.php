@@ -61,12 +61,33 @@ class ScheduleController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
+
+    public function actionCompose(){
+        return $this->render('create', [
+            'model' => $model,
+        ]);
+    }
+
     public function actionCreate()
     {
         $model = new Schedule();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if (Yii::$app->request->post()) {
+            Schedule::deleteAll(['rule_id'=>1]);
+
+            foreach(Yii::$app->request->post('Schedule') as $param){
+                $schedule = new Schedule();
+                $schedule->setAttributes($param);
+                $schedule->rule_id = 1;
+                if(!$schedule->save()) {
+                    $schedule->validate();
+                    //var_dump($schedule);die;
+                }
+            }
+
+            return $this->render('update', [
+                'model' => $model,
+            ]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -80,16 +101,33 @@ class ScheduleController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionUpdate($id)
+    public function actionUpdate()
     {
-        $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if (Yii::$app->request->post()) {
+            Schedule::deleteAll(['rule_id'=>1]);
+
+            $rule = \app\models\Rule::findOne(['id'=>1]);
+
+            $rule->timezone = Yii::$app->request->post('Rule')['timezone'];
+            $rule->regions = Yii::$app->request->post('Rule')['regions'];
+            $rule->show_everywhere = Yii::$app->request->post('Rule')['show_everywhere'];
+            $rule->save();
+
+            //var_dump(Yii::$app->request->post());die;
+
+            foreach(Yii::$app->request->post('Schedule')['params'] as $param){
+                $schedule = new Schedule();
+                $schedule->setAttributes($param);
+                $schedule->rule_id = 1;
+                if(!$schedule->save()) {
+                    $schedule->validate();
+                }
+            }
+
+            return $this->render('update');
         } else {
-            return $this->render('update', [
-                'model' => $model,
-            ]);
+            return $this->render('update');
         }
     }
 

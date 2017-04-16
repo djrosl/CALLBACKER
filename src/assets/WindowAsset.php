@@ -25,12 +25,12 @@ class WindowAsset extends AssetBundle
         //'templates/js/window_'.$this->type.'.js'
     ];
     public $depends = [
-        'yii\web\YiiAsset',
+        /*'yii\web\YiiAsset',*/
     ];
     public function init(){
         parent::init();
         $this->css = [
-            'templates/css/window_'. \Yii::$app->params['type'].'.css'
+            'http://callbacker.acrux.tk/templates/css/window_'. \Yii::$app->params['type'].'.css'
         ];
     }
 }

@@ -13,7 +13,8 @@ if(pages >= 3) {
   setTimeout(function(){
     if(!isShowed){
       $('#roslCallbackerWindowWrap').fadeIn(500);
-
+      window.stats = 'window'
+      window.acceptStatistics('show',window.stats);
       isShowed = true;  
     }
   }, 15000);
@@ -23,7 +24,8 @@ $(window).scroll(function(){
   if($(window).scrollTop() + $(window).height() == $(document).height()) {
       if(!isShowed){
         $('#roslCallbackerWindowWrap').fadeIn(500);
-      
+        window.stats = 'window'
+        window.acceptStatistics('show',window.stats);
         isShowed = true;
       }
    }

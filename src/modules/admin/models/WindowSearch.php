@@ -18,9 +18,8 @@ class WindowSearch extends Window
     public function rules()
     {
         return [
-            [['id', 'site_id', 'type', 'shows', 'calls', 'enabled'], 'integer'],
+            [['id', 'site_id', 'type', 'shows', 'calls', 'enabled', 'conversion', 'calls_conversion'], 'integer'],
             [['title'], 'safe'],
-            [['calls_conversion', 'conversion'], 'number'],
         ];
     }
 
@@ -51,6 +50,8 @@ class WindowSearch extends Window
         ]);
 
         $this->load($params);
+        
+        return $dataProvider;
 
         if (!$this->validate()) {
             // uncomment the following line if you do not want to return any records when validation fails
@@ -72,6 +73,5 @@ class WindowSearch extends Window
 
         $query->andFilterWhere(['like', 'title', $this->title]);
 
-        return $dataProvider;
     }
 }

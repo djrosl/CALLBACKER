@@ -31,8 +31,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'shows',
             'clicks',
             'conversion',
-            // 'calls',
-            // 'calls_conversion',
+            'calls',
+            'calls_conversion',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

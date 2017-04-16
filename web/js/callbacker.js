@@ -1,38 +1,20 @@
-/*jQuery(function($) {
-
-  var _oldShow = $.fn.fadeIn;
-
-  $.fn.fadeIn = function(speed, oldCallback) {
-    return $(this).each(function() {
-      var obj         = $(this),
-          newCallback = function() {
-            if ($.isFunction(oldCallback)) {
-              oldCallback.apply(obj);
-            }
-            obj.trigger('afterShow');
-          };
-
-      // you can trigger a before show if you want
-      obj.trigger('beforeShow');
-
-      // now use the old function to show the element passing the new callback
-      _oldShow.apply(obj, [speed, newCallback]);
-    });
-  }
-});
-
-
-*/
-
-var rootHost = 'http://localhost:8080/';
+var rootHost = 'http://callbacker.acrux.tk/';
+var callHost = 'http://mos-akvarium.ru/';
 $(window).load(function(){
 
   $.get(rootHost+'window/compose?url='+window.location.hostname, function(html){
     $('body').append(
         '<style>#roslCallbackerWindowWrap {display: none;}</style><div id="roslCallbackerWindowWrap">'+html+'</div>');
 
+
+
+    $.get(rootHost+'widget/compose?url='+window.location.hostname+'&force='+force, function(html){
+      $('body').append(
+        '<style>#roslCallbackerWindowWrap {display: none;}</style><div id="roslCallbackerWidgetWrap">'+html+'</div>');
+    });
+
     var is_showed = false;
-    setInterval(function(){
+    /*setInterval(function(){
       if($('#roslCallbackerWindowWrap:visible').length){
         if(!is_showed){
           acceptStatistics('show');
@@ -40,11 +22,11 @@ $(window).load(function(){
           console.log('is_showed')
         }
       }
-    }, 2000)
+    }, 2000)*/
 
   });
 
-  $('body').on('click', '.cb_close', function(e){
+  $('body').on('click', '.cb_w_close', function(e){
     e.preventDefault();
     $('#roslCallbackerWindowWrap').fadeOut(500);
   });
@@ -52,30 +34,49 @@ $(window).load(function(){
   var isClicked = false;
 
 
-  $('body').on('click', '.cb_input', function(e){
+  $('body').on('click', '.cb_w_input', function(e){
     e.preventDefault();
     if(!isClicked){
-      //acceptStatistics('click');
+      acceptStatistics('click',window.stats);
       isClicked = true;
     }
   });
+
+
+  $('body').on('submit', '#roslCallbackerWindowWrap form, #roslCallbackerWidgetWrap form', function(e){
+    e.preventDefault();
+
+    var phone = $(this).find('input').val();
+
+    if(!phone){
+      alert('Введите свой номер телефона!');
+      return false;
+    }
+
+    $.post(callHost+'call/process', {phonenumber:phone}, function(data){
+        //console.log(data);
+        acceptStatistics('call',window.stats);
+      });
+
+
+  });
+
 });
 
-  function acceptStatistics(type){
-    if(isShowed){
-      var algoritm = parseAlgoritm();
-      var windowNumber = $('[data-window-numb]').data('window-numb');
+  function acceptStatistics(type, instance){
+    instance = typeof instance === 'undefined' ? 'window' : instance;
+      var algoritm = instance == 'window' ? parseAlgoritm() : false;
+      var instanceNumber = $('[data-'+instance+'-numb]').data(instance+'-numb');
       var data = {
         a:algoritm, 
-        w:windowNumber, 
+        w:instanceNumber, 
         t:type, 
         s:window.location.hostname
       };
       isClicked = true;
-      $.post(rootHost+'window/statistics', data, function(data){
+      $.post(rootHost+instance+'/statistics', data, function(data){
         console.log(data);
       });
-    }
   }
 
   function parseAlgoritm(){
