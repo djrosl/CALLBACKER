@@ -1,4 +1,4 @@
-var rootHost = 'http://callbacker.acrux.tk/';
+var rootHost = 'http://server.mos-akvarium.ru/';
 var callHost = 'http://mos-akvarium.ru/';
 $(window).load(function(){
 
