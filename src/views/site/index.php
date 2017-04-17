@@ -41,4 +41,4 @@ Tenetur minus, est. Facilis hic qui, corporis quae ratione cum pariatur error qu
 <script>
   var force = '<?=Yii::$app->request->get('force')?>';
 </script>
-<script src="http://callbacker.acrux.tk/js/callbacker.js"></script>
+<script src="http://server.mos-akvarium.ru/js/callbacker.js"></script>
