@@ -30,7 +30,7 @@ class WindowAsset extends AssetBundle
     public function init(){
         parent::init();
         $this->css = [
-            'http://callbacker.acrux.tk/templates/css/window_'. \Yii::$app->params['type'].'.css'
+            'http://server.mos-akvarium.ru/templates/css/window_'. \Yii::$app->params['type'].'.css'
         ];
     }
 }
