@@ -30,8 +30,8 @@ class WidgetAsset extends AssetBundle
     public function init(){
         parent::init();
         $this->css = [
-            'http://callbacker.acrux.tk/templates/css/widget_'. \Yii::$app->params['type'].'.css',
-            'http://callbacker.acrux.tk/templates/css/widget_common.css'
+            'http://server.mos-akvarium.ru/templates/css/widget_'. \Yii::$app->params['type'].'.css',
+            'http://server.mos-akvarium.ru/templates/css/widget_common.css'
         ];
     }
 }
