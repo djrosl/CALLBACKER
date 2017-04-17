@@ -74,7 +74,7 @@ public function behaviors()
     if(!$zone_rule){
       $ip = '';
       $zone_rule = true; //TODO
-    } else {
+    } 
         $original = new \DateTime("now", new \DateTimeZone('UTC'));
         $timezoneName = timezone_name_from_abbr("", ((int)$rule->timezone)*3600, false);
         $modified = $original->setTimezone(new \DateTimezone($timezoneName));
@@ -93,7 +93,7 @@ public function behaviors()
             $time_rule = true;
           }
         }
-    }
+    
 
     if(!$zone_rule || !$time_rule){
       return false;
