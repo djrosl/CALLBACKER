@@ -85,13 +85,13 @@ public function behaviors()
 
         $time_rule = false;
         if($hour > $schedule->start_time && $hour < $schedule->end_time) {
-          if(!$schedule->no_break){
-            if($hour < $schedule->lunch_start || $hour > $schedule->lunch_end){
+          //if(!$schedule->no_break){
+            //if($hour < $schedule->lunch_start || $hour > $schedule->lunch_end){
               $time_rule = true;  
-            }
-          } else {
-            $time_rule = true;
-          }
+            //}
+          //} else {
+            //$time_rule = true;
+          //}
         }
     
 
