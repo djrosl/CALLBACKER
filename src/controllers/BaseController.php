@@ -65,7 +65,7 @@ public function behaviors()
         return false;
     }
 
-    $rule = \app\models\Rule::findOne(['id'=>$site->id]);
+    $rule = \app\models\Rule::findOne(['site_id'=>0]);
     if($rule){
         $zone_rule = $rule->show_everywhere;
     } else {
