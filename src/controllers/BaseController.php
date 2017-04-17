@@ -95,9 +95,9 @@ public function behaviors()
         }
     }
 
-    /*if(!$zone_rule || !$time_rule){
+    if(!$zone_rule || !$time_rule){
       return false;
-    }*/
+    }
     
     return parent::beforeAction($action);
   }
